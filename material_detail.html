@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2D Heterostructure Database</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #2c3e50;
+      padding-top: 20px;
+      color: white;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+    }
+
+    .menu-item {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .menu-item:hover {
+      background-color: #34495e;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      width: calc(100% - 220px);
+    }
+
+    #viewport {
+      width: 35%;
+      height: 350px;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      float: left;
+      margin-right: 20px;
+    }
+
+    #dataPanel {
+      width: 45%;
+      float: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      width: 50%;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      font-size: 26px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    #downloadBtn1, #downloadBtn2, #downloadBtn3, .downloadBtn {
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #downloadBtn1:hover, #downloadBtn2:hover, #downloadBtn3:hover, .downloadBtn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+  <!-- NGL viewer CDN -->
+  <script src="ngl.js"></script>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>vdWHs DB</h2>
+    <a href="index.html" class="menu-item">New Search</a>
+  </div>
+
+  <div class="content">
+    <h1 id="materialTitle">Loading Structure...</h1>
+    <p id="materialHeaderInfo"></p>
+
+    <h2>Crystal Structure</h2>
+
+    <div id="viewport"></div>
+
+    <!-- Data panel with table format -->
+    <div id="dataPanel">
+      <h3>Heterostructure Info</h3>
+      <table>
+        <tbody>
+          <tr><td>Layer 1</td><td id="mono1"></td></tr>
+          <tr><td>Layer 2</td><td id="mono2"></td></tr>
+          <tr><td>Twist Angle</td><td id="twist_angle"></td></tr>
+          <tr><td>Strain to Layer 1</td><td id="strain_to_1"></td></tr>
+          <tr><td>Strain to Layer 2</td><td id="strain_to_2"></td></tr>
+          <tr><td>Interlayer distance (d<sub>cal-cal</sub>)</td><td id="d_cal_cal"></td></tr>
+        </tbody>
+      </table>
+      <button id="downloadBtn1">Download heterostructure POSCAR</button>
+      <button id="downloadBtn2">Download strained layer1 POSCAR</button>
+      <button id="downloadBtn3">Download strained layer2 POSCAR</button>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <h2>Electronic Structure</h2>
+    <div id="electronicStructure" style="display: flex; gap: 10px; align-items: flex-start; width: 100%;">
+      <!-- Left side: Band structure image -->
+      <div style="flex: 0.8;">
+        <h3 style="margin-bottom: 10px; margin-left: 20px;">Layer-resolved Band Structure</h3>
+        <img id="bandImage" src="" alt="Band Structure" style="width: 100%; max-width: 500px; margin-left: 15px;" />
+        <button class="downloadBtn" id="btnDownloadZip">Download band structure (rawdata & gnuplot script)</button>
+      </div>
+
+      <!-- Right side: Band structure info in table -->
+      <div id="bandTextInfo" style="flex: 1.2">
+        <h3>Heterostructure Info</h3>
+        <table>
+          <tbody>
+            <tr><td>Heterostructure Gap</td><td id="hete_gap"></td></tr>
+            <tr><td>Band Alignment Type</td><td id="band_alignment_type"></td></tr>
+            <tr><td>Vacuum Dipole Step (vh)</td><td id="vh"></td></tr>
+            <tr><td>Midgap Difference (middiff)</td><td id="middiff"></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Isolated Monolayer Info</h3>
+        <p>(Vacuum level is set to zero)</p>
+        <table>
+          <tbody>
+            <tr><td>VBM (Layer 1)</td><td id="vbm1"></td></tr>
+            <tr><td>CBM (Layer 1)</td><td id="cbm1"></td></tr>
+            <tr><td>VBM (Layer 2)</td><td id="vbm2"></td></tr>
+            <tr><td>CBM (Layer 2)</td><td id="cbm2"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      // Helper function to safely handle display of values
+      function safeText(value, unit = "", decimals = null) {
+        if (value === undefined || value === null || value === "" || isNaN(value)) return "N/A";
+        return decimals !== null ? parseFloat(value).toFixed(decimals) + unit : value + unit;
+      }
+
+      // Get material ID from URL query string
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      const materialId = getQueryParam("material");
+      const titleEl = document.getElementById("materialTitle");
+      const headerInfoEl = document.getElementById("materialHeaderInfo");
+
+      if (!materialId) {
+        titleEl.textContent = "Error: No material ID provided in URL";
+      } else {
+        fetch("data/DFT_vdWHs.json")
+          .then(res => res.json())
+          .then(data => {
+            const material = data.find(item => item.number.trim() === materialId);
+            if (!material) {
+              titleEl.textContent = "Material Not Found";
+              headerInfoEl.textContent = "No structure data available.";
+              return;
+            }
+
+            // Set header
+            titleEl.textContent = `${material.mono1.trim()} / ${material.mono2.trim()} heterostructures`;
+
+            // Fill data panel
+            document.getElementById("mono1").textContent = material.mono1 || "N/A";
+            document.getElementById("mono2").textContent = material.mono2 || "N/A";
+            document.getElementById("twist_angle").textContent = safeText(material.twist_angle, " °");
+            document.getElementById("strain_to_1").textContent = safeText(material.strain_to_1, " %");
+            document.getElementById("strain_to_2").textContent = safeText(material.strain_to_2, " %");
+            document.getElementById("d_cal_cal").textContent = safeText(material.d_cal_cal, " Å", 3);
+
+            // Set band structure info
+            document.getElementById("hete_gap").textContent = safeText(material.hete_gap, " eV", 3);
+            document.getElementById("band_alignment_type").textContent = material.band_alignment_type || "N/A";
+            document.getElementById("vh").textContent = safeText(material.vh, " eV", 3);
+            document.getElementById("middiff").textContent = safeText(material.middiff, " eV", 3);
+            document.getElementById("vbm1").textContent = safeText(material.vbm1, " eV", 3);
+            document.getElementById("cbm1").textContent = safeText(material.cbm1, " eV", 3);
+            document.getElementById("vbm2").textContent = safeText(material.vbm2, " eV", 3);
+            document.getElementById("cbm2").textContent = safeText(material.cbm2, " eV", 3);
+
+            // Set band image
+            document.getElementById("bandImage").src = `POSCAR/${materialId}/band.png`;
+
+            // Setup download links
+            const addDownload = (btnId, path, filename) => {
+              document.getElementById(btnId).addEventListener("click", () => {
+                const link = document.createElement("a");
+                link.href = path;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+            };
+
+            addDownload("downloadBtn1", `POSCAR/${materialId}/CONTCAR`, `CONTCAR_${materialId}_hete.vasp`);
+            addDownload("downloadBtn2", `POSCAR/${materialId}/CONTCAR_mono1`, `CONTCAR_${materialId}_mono1.vasp`);
+            addDownload("downloadBtn3", `POSCAR/${materialId}/CONTCAR_mono2`, `CONTCAR_${materialId}_mono2.vasp`);
+            addDownload("btnDownloadZip", `POSCAR/${materialId}/band.zip`, `band_${materialId}.zip`);
+
+            // Load CIF into NGL viewer
+            const stage = new NGL.Stage("viewport", { backgroundColor: "white" });
+            stage.setParameters({ cameraType: "orthographic" });
+
+            const cifPath = `POSCAR/${materialId}/CONTCAR_ngl.cif`;
+            stage.loadFile(cifPath, { defaultRepresentation: true })
+              .then(comp => {
+                comp.addRepresentation("ball+stick", {
+                  sphereScale: 0.6,
+                  stickRadius: 0.2
+                });
+                comp.addRepresentation("unitcell", { color: "black" });
+                comp.autoView();
+              })
+              .catch(err => {
+                headerInfoEl.textContent = "Failed to load structure file.";
+                console.error("NGL load error:", err);
+              });
+          });
+      }
+    </script>
+  </div>
+</body>
+</html>

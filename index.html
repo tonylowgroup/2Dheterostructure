@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Heterostructures Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #2c3e50;
+            padding-top: 20px;
+            position: fixed;
+            color: white;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .menu-item:hover {
+            background-color: #34495e;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            width: calc(100% - 220px);
+            text-align: center;
+        }
+        .citation {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .search-container {
+            margin-top: 20px;
+        }
+        select {
+            margin: 10px;
+            padding: 5px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            width: 16.6%;  /* Divide equally (100% / 6 columns) */
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            overflow: hidden; 
+            white-space: nowrap;  /* Prevent text wrapping */
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .pagination {
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>vdWHs DB</h2>
+        <a href="index.html" class="menu-item">New Search</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Computational Database for van der Waals Heterostructures</h1>
+        </div>
+        <div class="citation">
+            <p>This database contains first-principles calculation results of a total of 990 van der Waals heterostructures with 45 monolayer transition metal dichalcogenides.</p>
+            <p>If you use this database in your research, please cite:</p>
+            <p>Seungjun Lee and Tony Low et al, <b>Generalized energy band alignment model for van der Waals heterostructures with a charge spillage dipole</b></p>
+            <p>[https://arxiv.org/abs/2506.18850]</p>
+        </div>
+
+        <!-- Search container -->
+        <div class="search-container">
+            <label for="mono1">Material 1:</label>
+            <select id="mono1" onchange="filterData()"></select>
+            
+            <label for="mono2">Material 2:</label>
+            <select id="mono2" onchange="filterData()"></select>
+            
+            <label for="alignment">Band Alignment Type:</label>
+            <select id="alignment" onchange="filterData()"></select>
+            
+            <!-- New Bandgap Range Inputs -->
+            <label for="bandgapMin">Min Band Gap (eV):</label>
+            <input type="number" id="bandgapMin" oninput="filterData()">
+    
+            <label for="bandgapMax">Max Band Gap (eV):</label>
+            <input type="number" id="bandgapMax" oninput="filterData()">
+        </div>
+
+        <!-- Data table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>material ID</th>
+                    <th>layer 1</th>
+                    <th>layer 2</th>
+                    <th>band gap (eV)</th>
+                    <th>band alignment type</th>
+                    <th>vacuum dipole step (eV)</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script>
+        let jsonData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const rowsPerPage = 20;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("data/DFT_vdWHs.json")
+                .then(response => response.json())
+                .then(data => {
+                    jsonData = Array.isArray(data) ? data : Object.values(data);
+                    filteredData = [...jsonData];
+                    populateFilters();
+                    displayData();
+                });
+         
+            const searchInput = document.createElement("input");
+            searchInput.setAttribute("type", "text");
+            searchInput.setAttribute("id", "searchBox");
+            searchInput.setAttribute("placeholder", "Search monolayer...");
+            searchInput.addEventListener("input", filterData);
+            document.querySelector(".search-container").appendChild(searchInput);
+        });
+
+        function filterData() {
+    // Get values from search box, dropdowns, and bandgap range inputs
+    let query = document.getElementById("searchBox").value.toLowerCase();
+    let selectedMono1 = document.getElementById("mono1").value;
+    let selectedMono2 = document.getElementById("mono2").value;
+    let selectedAlignment = document.getElementById("alignment").value;
+    
+    // Parse the bandgap range inputs (if left empty, they become NaN)
+    let bandgapMin = parseFloat(document.getElementById("bandgapMin").value);
+    let bandgapMax = parseFloat(document.getElementById("bandgapMax").value);
+    
+    filteredData = jsonData.filter(item => {
+        // Get the bandgap value for the current item (assuming stored in "vh")
+        let bandgap = parseFloat(item["hete_gap"]);
+
+        // Check text search for partial matching in mono1, mono2, or band alignment type
+        let matchQuery = item["mono1"].toLowerCase().includes(query) ||
+                         item["mono2"].toLowerCase().includes(query) ;
+                         
+        // Check dropdown filters; ignore the filter if nothing is selected (empty string)
+        let matchMono1 = selectedMono1 === "" || item["mono1"].trim() === selectedMono1;
+        let matchMono2 = selectedMono2 === "" || item["mono2"].trim() === selectedMono2;
+        let matchAlignment = selectedAlignment === "" || item["band_alignment_type"] === selectedAlignment;
+        
+        // Check bandgap range only if a value is provided
+        let matchBandgap = true;
+        if (!isNaN(bandgapMin)) {
+            matchBandgap = matchBandgap && (bandgap >= bandgapMin);
+        }
+        if (!isNaN(bandgapMax)) {
+            matchBandgap = matchBandgap && (bandgap <= bandgapMax);
+        }
+        
+        // Return items that match all criteria
+        return matchQuery && matchMono1 && matchMono2 && matchAlignment && matchBandgap;
+    });
+
+    currentPage = 1;
+    displayData();
+}
+
+
+        function populateFilters() {
+            let mono1Set = new Set(), mono2Set = new Set(), alignmentSet = new Set();
+            jsonData.forEach(item => {
+                if (item["mono1"]) mono1Set.add(item["mono1"].trim());
+                if (item["mono2"]) mono2Set.add(item["mono2"].trim());
+                if (item["band_alignment_type"]) alignmentSet.add(item["band_alignment_type"]);
+            });
+            populateSelect("mono1", mono1Set);
+            populateSelect("mono2", mono2Set);
+            populateSelect("alignment", alignmentSet);
+        }
+
+        function populateSelect(id, values) {
+            const select = document.getElementById(id);
+            select.innerHTML = `<option value="">All</option>`;
+            values.forEach(value => {
+                select.innerHTML += `<option value="${value}">${value}</option>`;
+            });
+        }
+        function displayData() {
+            const table = document.getElementById("dataTable");
+            table.innerHTML = "";  // Clear previous table contents
+            
+            let start = (currentPage - 1) * rowsPerPage;
+            let end = start + rowsPerPage;
+            let paginatedData = filteredData.slice(start, end);  // Get only the current page's data
+
+            if (paginatedData.length === 0) {
+                table.innerHTML = "<tr><td colspan='5'>No results found</td></tr>";
+                return;
+            }
+
+           paginatedData.forEach((item, index) => {
+               // Create a row that is clickable. Assume item has a unique "id" or "name" property.
+                let row = document.createElement("tr");
+                row.style.cursor = "pointer";
+                row.onclick = () => {
+                    // Pass the unique identifier via the URL. Change 'material_detail.html' to your detail page.
+                    window.location.href = `material_detail.html?material=${encodeURIComponent(item["number"].trim())}`;
+                };
+            row.innerHTML = `
+                <td>${item["number"] || start + index + 1}</td>
+                <td>${item["mono1"]?.trim()}</td>
+                <td>${item["mono2"]?.trim()}</td>
+                <td>${parseFloat(item["hete_gap"]).toFixed(3)}</td>
+                <td>${item["band_alignment_type"]}</td>
+                <td>${parseFloat(item["vh"]).toFixed(3)}</td>
+        `;
+        table.appendChild(row);
+    });
+
+            updatePagination();  // Ensure pagination is updated as well
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+            let paginationHtml = "";
+            let startPage = Math.floor((currentPage - 1) / 10) * 10 + 1;
+            let endPage = Math.min(startPage + 9, totalPages);
+            
+            // First page button
+            if (currentPage > 1) {
+                paginationHtml += `<button onclick="changePage(1)">« First</button> `;
+            }
+            
+            // Previous 10 pages button
+            if (startPage > 1) {
+                paginationHtml += `<button onclick="changePage(${startPage - 1})">◀</button> `;
+            }
+            
+            // Page numbers
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHtml += `<button onclick="changePage(${i})" ${i === currentPage ? 'style="font-weight:bold;"' : ""}>${i}</button> `;
+            }
+            
+            // Next 10 pages button
+            if (endPage < totalPages) {
+                paginationHtml += `<button onclick="changePage(${endPage + 1})">▶</button> `;
+            }
+            
+            // Last page button
+            if (currentPage < totalPages) {
+                paginationHtml += `<button onclick="changePage(${totalPages})">Last »</button>`;
+            }
+            
+            document.getElementById("pagination").innerHTML = paginationHtml;
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            displayData();
+        }
+    </script>
+</body>
+</html>
