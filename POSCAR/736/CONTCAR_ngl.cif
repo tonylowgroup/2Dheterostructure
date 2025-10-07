@@ -1,0 +1,32 @@
+# generated using pymatgen
+data_HfTe4Pd
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.96351193
+_cell_length_b   3.96351200
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   59.99999942
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   HfTe4Pd
+_chemical_formula_sum   'Hf1 Te4 Pd1'
+_cell_volume   408.14288601
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.00000000  0.00000000  0.37916246  1
+  Te  Te1  1  0.33333300  0.33333300  0.55825144  1
+  Te  Te2  1  0.66666700  0.66666700  0.65243495  1
+  Te  Te3  1  0.33333300  0.33333300  0.31850129  1
+  Te  Te4  1  0.33333300  0.33333300  0.43946999  1
+  Pd  Pd5  1  0.00000000  0.00000000  0.60512787  1

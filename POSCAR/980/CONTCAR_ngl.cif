@@ -1,0 +1,44 @@
+# generated using pymatgen
+data_ZrTe2MoSe2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.35801791
+_cell_length_b   6.35801791
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000095
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   ZrTe2MoSe2
+_chemical_formula_sum   'Zr3 Te6 Mo3 Se6'
+_cell_volume   1050.25651505
+_cell_formula_units_Z   3
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zr  Zr0  1  0.00000000  0.00000000  0.60460247  1
+  Zr  Zr1  1  0.33333300  0.33333300  0.60460247  1
+  Zr  Zr2  1  0.66666700  0.66666700  0.60460247  1
+  Te  Te3  1  0.00000000  0.33333300  0.44633527  1
+  Te  Te4  1  0.66666700  0.00000000  0.32938664  1
+  Te  Te5  1  0.33333300  0.66666700  0.32938664  1
+  Te  Te6  1  0.00000000  0.33333300  0.32938664  1
+  Te  Te7  1  0.33333300  0.66666700  0.44633527  1
+  Te  Te8  1  0.66666700  0.00000000  0.44633527  1
+  Mo  Mo9  1  0.00000000  0.00000000  0.38801131  1
+  Mo  Mo10  1  0.33333300  0.33333300  0.38801131  1
+  Mo  Mo11  1  0.66666700  0.66666700  0.38801131  1
+  Se  Se12  1  0.33333300  0.66666700  0.65932951  1
+  Se  Se13  1  0.00000000  0.66666700  0.55001079  1
+  Se  Se14  1  0.66666700  0.33333300  0.55001079  1
+  Se  Se15  1  0.33333300  0.00000000  0.55001079  1
+  Se  Se16  1  0.66666700  0.00000000  0.65932951  1
+  Se  Se17  1  0.00000000  0.33333300  0.65932951  1

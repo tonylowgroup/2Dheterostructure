@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Zr4Te6Pd3S8
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.05068224
+_cell_length_b   7.05068200
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000111
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Zr4Te6Pd3S8
+_chemical_formula_sum   'Zr4 Te6 Pd3 S8'
+_cell_volume   1291.55873519
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zr  Zr0  1  0.99838947  0.49958997  0.39951035  1
+  Zr  Zr1  1  0.49958997  0.50202056  0.39951035  1
+  Zr  Zr2  1  0.50202056  0.99838947  0.39951035  1
+  Zr  Zr3  1  0.00000000  0.00000000  0.40188803  1
+  Te  Te4  1  0.99233055  0.34149875  0.54454232  1
+  Te  Te5  1  0.34149875  0.66617070  0.54454232  1
+  Te  Te6  1  0.66617070  0.99233055  0.54454232  1
+  Te  Te7  1  0.32572590  0.00703539  0.63368432  1
+  Te  Te8  1  0.66723871  0.32572590  0.63368432  1
+  Te  Te9  1  0.00703539  0.66723871  0.63368432  1
+  Pd  Pd10  1  0.00000000  0.00000000  0.58675591  1
+  Pd  Pd11  1  0.66666700  0.66666700  0.59212200  1
+  Pd  Pd12  1  0.33333300  0.33333300  0.58713989  1
+  S  S13  1  0.16671401  0.16561005  0.34882408  1
+  S  S14  1  0.16561005  0.66767694  0.34882408  1
+  S  S15  1  0.66767694  0.16671401  0.34882408  1
+  S  S16  1  0.66666700  0.66666700  0.34770305  1
+  S  S17  1  0.17153055  0.16219113  0.45389993  1
+  S  S18  1  0.16219113  0.66627932  0.45389993  1
+  S  S19  1  0.66627932  0.17153055  0.45389993  1
+  S  S20  1  0.66666700  0.66666700  0.45362313  1

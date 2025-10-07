@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Hf3Ni4(S3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.90411921
+_cell_length_b   5.90411921
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000880
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Hf3Ni4(S3O4)2
+_chemical_formula_sum   'Hf3 Ni4 S6 O8'
+_cell_volume   905.65369026
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.66666484  0.66666877  0.39768091  1
+  Hf  Hf1  1  0.33333179  0.33333134  0.40564558  1
+  Hf  Hf2  1  0.00000063  0.99999929  0.40839672  1
+  Ni  Ni3  1  0.00000249  0.00000179  0.57933486  1
+  Ni  Ni4  1  0.99983753  0.50011054  0.57932668  1
+  Ni  Ni5  1  0.50004996  0.99984044  0.57932604  1
+  Ni  Ni6  1  0.50011254  0.50005061  0.57932102  1
+  S  S7  1  0.34397532  0.99231395  0.45678988  1
+  S  S8  1  0.00839863  0.66910508  0.35065600  1
+  S  S9  1  0.66909978  0.32249832  0.35065727  1
+  S  S10  1  0.32249346  0.00840515  0.35065665  1
+  S  S11  1  0.99231685  0.66370227  0.45678880  1
+  S  S12  1  0.66370588  0.34397209  0.45678874  1
+  O  O13  1  0.33334133  0.33332940  0.60892145  1
+  O  O14  1  0.33304479  0.83260109  0.60899258  1
+  O  O15  1  0.66667282  0.66666777  0.54954778  1
+  O  O16  1  0.66675785  0.16582669  0.54957180  1
+  O  O17  1  0.16740564  0.66675178  0.54957374  1
+  O  O18  1  0.16583331  0.16741340  0.54958090  1
+  O  O19  1  0.83435635  0.33304535  0.60899165  1
+  O  O20  1  0.83259821  0.83436488  0.60898597  1

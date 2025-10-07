@@ -1,0 +1,32 @@
+set term png          
+set output "band.png" 
+
+set arrow 1 from 0.6922670387, graph 0, 0 to 0.6922670387, graph 1, 0 nohead back nofilled linetype 1 linecolor 0 linewidth 1
+set arrow 2 from 1.0384005739, graph 0, 0 to 1.0384005739, graph 1, 0 nohead back nofilled linetype 1 linecolor 0 linewidth 1
+set arrow 3 from 1.5793444263, graph 0, 0 to 1.5793444263, graph 1, 0 nohead back nofilled linetype 1 linecolor 0 linewidth 1
+set ytics font 'arial,12'
+set ylabel "E-E_f (eV)"
+set ylabel font 'arial,12'
+set yrange [-2:2]
+#set ytics 0.5
+set size 0.7,1
+unset xtics
+
+set xtics   ("{/Symbol G}" 0.00000, "K" 0.6922670387, "M" 1.0384005739, "{/Symbol G}" 1.5793444263)
+
+set xtics font 'arial,16'
+set ytics font 'arial,16'
+set ylabel font 'arial,16'
+set ylabel font 'arial,16'
+set key box opaque
+set key font 'arial,16'
+
+set border 31 front linetype -1 linewidth 1.500
+
+#set pointsize 1
+
+Ef=-0.2967
+
+pl   'band.proj' u ($1):($2-Ef) w l lc -1 not, \
+       '' u ($1):($2-Ef):($3)/($3+$4)*1.5 w p pt 7 ps variable title 'Layer1',\
+       '' u ($1):($2-Ef):($4)/($3+$4)*1.5 w p pt 7 ps variable title 'Layer2',\

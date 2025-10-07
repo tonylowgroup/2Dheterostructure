@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Ti3Te6(MoS2)4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.42036900
+_cell_length_b   6.42036818
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000094
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ti3Te6(MoS2)4
+_chemical_formula_sum   'Ti3 Te6 Mo4 S8'
+_cell_volume   1070.95645664
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ti  Ti0  1  0.66666700  0.66666700  0.38249480  1
+  Ti  Ti1  1  0.33333300  0.33333300  0.38486995  1
+  Ti  Ti2  1  0.00000000  0.00000000  0.38542878  1
+  Te  Te3  1  0.66607218  0.99668063  0.44340971  1
+  Te  Te4  1  0.99668063  0.33724718  0.44340971  1
+  Te  Te5  1  0.66711404  0.00224322  0.32444108  1
+  Te  Te6  1  0.33064275  0.66711404  0.32444108  1
+  Te  Te7  1  0.00224322  0.33064275  0.32444108  1
+  Te  Te8  1  0.33724718  0.66607218  0.44340971  1
+  Mo  Mo9  1  0.00000000  0.00000000  0.60888607  1
+  Mo  Mo10  1  0.49927724  0.50085635  0.60889015  1
+  Mo  Mo11  1  0.50085635  0.99986641  0.60889015  1
+  Mo  Mo12  1  0.99986641  0.49927724  0.60889015  1
+  S  S13  1  0.16729535  0.16603593  0.66064098  1
+  S  S14  1  0.66666700  0.66666700  0.66062593  1
+  S  S15  1  0.66666700  0.66666700  0.55700519  1
+  S  S16  1  0.66653244  0.16828967  0.55727417  1
+  S  S17  1  0.16517889  0.66653244  0.55727417  1
+  S  S18  1  0.16828967  0.16517889  0.55727417  1
+  S  S19  1  0.16603593  0.66666972  0.66064098  1
+  S  S20  1  0.66666972  0.16729535  0.66064098  1

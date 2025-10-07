@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Zr3Ni4(S3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.92867957
+_cell_length_b   5.92867957
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000474
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Zr3Ni4(S3O4)2
+_chemical_formula_sum   'Zr3 Ni4 S6 O8'
+_cell_volume   913.20412557
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zr  Zr0  1  0.66666674  0.66666676  0.39575887  1
+  Zr  Zr1  1  0.33333328  0.33333319  0.40680138  1
+  Zr  Zr2  1  0.99999997  0.00000004  0.40979368  1
+  Ni  Ni3  1  0.00000001  0.99999998  0.57912485  1
+  Ni  Ni4  1  0.99988306  0.50003102  0.57914340  1
+  Ni  Ni5  1  0.50008594  0.99988306  0.57914340  1
+  Ni  Ni6  1  0.50003098  0.50008597  0.57914340  1
+  S  S7  1  0.34761105  0.98908418  0.45754856  1
+  S  S8  1  0.01221861  0.66952546  0.35036401  1
+  S  S9  1  0.66952544  0.31825604  0.35036405  1
+  S  S10  1  0.31825597  0.01221854  0.35036401  1
+  S  S11  1  0.98908426  0.66330475  0.45754855  1
+  S  S12  1  0.66330468  0.34761102  0.45754853  1
+  O  O13  1  0.33333319  0.33333313  0.60858440  1
+  O  O14  1  0.33297895  0.83263430  0.60862464  1
+  O  O15  1  0.66666684  0.66666683  0.54954739  1
+  O  O16  1  0.66668979  0.16585718  0.54954355  1
+  O  O17  1  0.16745368  0.66668983  0.54954356  1
+  O  O18  1  0.16585716  0.16745360  0.54954353  1
+  O  O19  1  0.83438607  0.33297899  0.60862464  1
+  O  O20  1  0.83263434  0.83438613  0.60862463  1

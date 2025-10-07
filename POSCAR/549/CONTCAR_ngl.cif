@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Hf4Zr3(Se3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.45695470
+_cell_length_b   6.45695500
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000357
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Hf4Zr3(Se3O4)2
+_chemical_formula_sum   'Hf4 Zr3 Se6 O8'
+_cell_volume   1083.19688172
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.00033613  0.00000054  0.58596027  1
+  Hf  Hf1  1  0.00001580  0.50016059  0.58557113  1
+  Hf  Hf2  1  0.50026807  0.99986748  0.58556803  1
+  Hf  Hf3  1  0.50030906  0.49996052  0.58556192  1
+  Zr  Zr4  1  0.66666614  0.66666639  0.38539136  1
+  Zr  Zr5  1  0.33333222  0.33333344  0.39581300  1
+  Zr  Zr6  1  0.00000052  0.99999906  0.39573251  1
+  Se  Se7  1  0.34265292  0.99063562  0.44808930  1
+  Se  Se8  1  0.00936602  0.66666037  0.33629672  1
+  Se  Se9  1  0.66665926  0.32397402  0.33629668  1
+  Se  Se10  1  0.32397330  0.00936682  0.33629648  1
+  Se  Se11  1  0.99063866  0.66671020  0.44809110  1
+  Se  Se12  1  0.66670976  0.34264986  0.44809055  1
+  O  O13  1  0.33346051  0.33333182  0.61794183  1
+  O  O14  1  0.33426044  0.83300237  0.61811839  1
+  O  O15  1  0.66678991  0.66666858  0.55320621  1
+  O  O16  1  0.66765491  0.16558000  0.55344033  1
+  O  O17  1  0.16731555  0.66729458  0.55343697  1
+  O  O18  1  0.16594133  0.16713536  0.55343216  1
+  O  O19  1  0.83329021  0.33389507  0.61811294  1
+  O  O20  1  0.83335929  0.83310729  0.61810911  1

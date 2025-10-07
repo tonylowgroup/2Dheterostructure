@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Ni4Mo3(Se3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.71073115
+_cell_length_b   5.71073115
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000989
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ni4Mo3(Se3O4)2
+_chemical_formula_sum   'Ni4 Mo3 Se6 O8'
+_cell_volume   847.29639561
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ni  Ni0  1  0.00000213  0.99999985  0.58036649  1
+  Ni  Ni1  1  0.99979012  0.50028098  0.58041098  1
+  Ni  Ni2  1  0.49992971  0.99978746  0.58041173  1
+  Ni  Ni3  1  0.50028368  0.49992691  0.58041180  1
+  Mo  Mo4  1  0.66640436  0.66658770  0.39883490  1
+  Mo  Mo5  1  0.33298968  0.33341392  0.39928500  1
+  Mo  Mo6  1  0.99959624  0.00000006  0.39921056  1
+  Se  Se7  1  0.33430750  0.99842287  0.45483349  1
+  Se  Se8  1  0.00044854  0.66655072  0.34328156  1
+  Se  Se9  1  0.66620854  0.33266237  0.34328167  1
+  Se  Se10  1  0.33234307  0.00078957  0.34330578  1
+  Se  Se11  1  0.99808095  0.66695060  0.45485373  1
+  Se  Se12  1  0.66660858  0.33463103  0.45485274  1
+  O  O13  1  0.33333017  0.33333331  0.61141198  1
+  O  O14  1  0.33289407  0.83278476  0.61148845  1
+  O  O15  1  0.66666524  0.66666349  0.54905906  1
+  O  O16  1  0.66646033  0.16549375  0.54910689  1
+  O  O17  1  0.16804947  0.66645588  0.54910600  1
+  O  O18  1  0.16549872  0.16804628  0.54910452  1
+  O  O19  1  0.83432412  0.33289101  0.61148874  1
+  O  O20  1  0.83278480  0.83432748  0.61148892  1
