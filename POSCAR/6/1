@@ -1,0 +1,4 @@
+from pymatgen.core import Structure
+
+structure = Structure.from_file("CONTCAR")
+structure.to(filename="CONTCAR_ngl.cif", fmt="cif")

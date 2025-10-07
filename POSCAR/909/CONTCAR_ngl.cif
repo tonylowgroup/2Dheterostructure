@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Zr3Ti4(Se3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.19179100
+_cell_length_b   6.19179186
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   59.99999923
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Zr3Ti4(Se3O4)2
+_chemical_formula_sum   'Zr3 Ti4 Se6 O8'
+_cell_volume   996.05775294
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zr  Zr0  1  0.66666700  0.66666700  0.38690201  1
+  Zr  Zr1  1  0.33333300  0.33333300  0.39656423  1
+  Zr  Zr2  1  0.00000000  0.00000000  0.39647237  1
+  Ti  Ti3  1  0.00000000  0.00000000  0.57906653  1
+  Ti  Ti4  1  0.99341713  0.52989399  0.58703056  1
+  Ti  Ti5  1  0.47668888  0.99341713  0.58703056  1
+  Ti  Ti6  1  0.52989399  0.47668888  0.58703056  1
+  Se  Se7  1  0.99036210  0.34302367  0.45058180  1
+  Se  Se8  1  0.66663365  0.00999222  0.33580164  1
+  Se  Se9  1  0.32337413  0.66663365  0.33580164  1
+  Se  Se10  1  0.00999222  0.32337413  0.33580164  1
+  Se  Se11  1  0.66661423  0.99036210  0.45058180  1
+  Se  Se12  1  0.34302367  0.66661423  0.45058180  1
+  O  O13  1  0.33333300  0.33333300  0.61476686  1
+  O  O14  1  0.33316787  0.83265428  0.61694498  1
+  O  O15  1  0.66666700  0.66666700  0.55466770  1
+  O  O16  1  0.67450924  0.17303013  0.55269344  1
+  O  O17  1  0.15246163  0.67450924  0.55269344  1
+  O  O18  1  0.17303013  0.15246163  0.55269344  1
+  O  O19  1  0.83417685  0.33316787  0.61694498  1
+  O  O20  1  0.83265428  0.83417685  0.61694498  1

@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Zr3Te6(PtO2)4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.53770509
+_cell_length_b   6.53770509
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   59.99998901
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Zr3Te6(PtO2)4
+_chemical_formula_sum   'Zr3 Te6 Pt4 O8'
+_cell_volume   1110.45890171
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zr  Zr0  1  0.66666700  0.66666700  0.38872759  1
+  Zr  Zr1  1  0.33333300  0.33333300  0.39352972  1
+  Zr  Zr2  1  0.00000000  0.00000000  0.39293155  1
+  Te  Te3  1  0.99460645  0.66774246  0.45506504  1
+  Te  Te4  1  0.33765109  0.99460645  0.45506504  1
+  Te  Te5  1  0.00472292  0.66606016  0.32774134  1
+  Te  Te6  1  0.66606016  0.32921691  0.32774134  1
+  Te  Te7  1  0.32921691  0.00472292  0.32774134  1
+  Te  Te8  1  0.66774246  0.33765109  0.45506504  1
+  Pt  Pt9  1  0.00000000  0.00000000  0.58100509  1
+  Pt  Pt10  1  0.49977338  0.50042743  0.58109373  1
+  Pt  Pt11  1  0.50042743  0.99979919  0.58109373  1
+  Pt  Pt12  1  0.99979919  0.49977338  0.58109373  1
+  O  O13  1  0.33283470  0.83300584  0.61032387  1
+  O  O14  1  0.83415845  0.33283470  0.61032387  1
+  O  O15  1  0.66666700  0.66666700  0.55186958  1
+  O  O16  1  0.66667430  0.16577424  0.55179151  1
+  O  O17  1  0.16755247  0.66667430  0.55179151  1
+  O  O18  1  0.16577424  0.16755247  0.55179151  1
+  O  O19  1  0.33333300  0.33333300  0.61021998  1
+  O  O20  1  0.83300584  0.83415845  0.61032387  1

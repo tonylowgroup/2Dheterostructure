@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Cr4Te6W3S8
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.12002700
+_cell_length_b   6.12002688
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000474
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Cr4Te6W3S8
+_chemical_formula_sum   'Cr4 Te6 W3 S8'
+_cell_volume   973.10246948
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Cr  Cr0  1  0.00000000  0.00000000  0.60751902  1
+  Cr  Cr1  1  0.99987801  0.49925465  0.60747351  1
+  Cr  Cr2  1  0.50086734  0.99987801  0.60747351  1
+  Cr  Cr3  1  0.49925465  0.50086734  0.60747351  1
+  Te  Te4  1  0.99838293  0.33501616  0.44171887  1
+  Te  Te5  1  0.66667871  0.00066671  0.32072301  1
+  Te  Te6  1  0.33265459  0.66667871  0.32072301  1
+  Te  Te7  1  0.00066671  0.33265459  0.32072301  1
+  Te  Te8  1  0.33501616  0.66660091  0.44171887  1
+  Te  Te9  1  0.66660091  0.99838293  0.44171887  1
+  W  W10  1  0.00000000  0.00000000  0.38136881  1
+  W  W11  1  0.33333300  0.33333300  0.38135138  1
+  W  W12  1  0.66666700  0.66666700  0.38095997  1
+  S  S13  1  0.16734180  0.16609802  0.65617971  1
+  S  S14  1  0.66666700  0.66666700  0.65614813  1
+  S  S15  1  0.66666700  0.66666700  0.55860810  1
+  S  S16  1  0.66654648  0.16848574  0.55896910  1
+  S  S17  1  0.16496878  0.66654648  0.55896910  1
+  S  S18  1  0.16848574  0.16496878  0.55896910  1
+  S  S19  1  0.16609802  0.66656118  0.65617971  1
+  S  S20  1  0.66656118  0.16734180  0.65617971  1

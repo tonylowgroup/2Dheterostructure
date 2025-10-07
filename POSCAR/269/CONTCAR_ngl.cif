@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Hf3Pt4(S3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.30486900
+_cell_length_b   6.30486899
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000520
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Hf3Pt4(S3O4)2
+_chemical_formula_sum   'Hf3 Pt4 S6 O8'
+_cell_volume   1032.77102105
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.00000000  0.00000000  0.59417265  1
+  Hf  Hf1  1  0.33333300  0.33333300  0.59449874  1
+  Hf  Hf2  1  0.66666700  0.66666700  0.59417480  1
+  Pt  Pt3  1  0.49988064  0.50003030  0.41922153  1
+  Pt  Pt4  1  0.50003030  0.00008905  0.41922153  1
+  Pt  Pt5  1  0.00000000  0.00000000  0.41915822  1
+  Pt  Pt6  1  0.00008905  0.49988064  0.41922153  1
+  S  S7  1  0.66716004  0.33338749  0.64239028  1
+  S  S8  1  0.99945247  0.66716004  0.64239028  1
+  S  S9  1  0.66588366  0.00086450  0.54644884  1
+  S  S10  1  0.33325184  0.66588366  0.54644884  1
+  S  S11  1  0.00086450  0.33325184  0.54644884  1
+  S  S12  1  0.33338749  0.99945247  0.64239028  1
+  O  O13  1  0.83410562  0.83262510  0.45048139  1
+  O  O14  1  0.16693008  0.16647601  0.38771364  1
+  O  O15  1  0.16647601  0.66659490  0.38771364  1
+  O  O16  1  0.66659490  0.16693008  0.38771364  1
+  O  O17  1  0.66666700  0.66666700  0.38770781  1
+  O  O18  1  0.33326828  0.83410562  0.45048139  1
+  O  O19  1  0.33333300  0.33333300  0.45069374  1
+  O  O20  1  0.83262510  0.33326828  0.45048139  1

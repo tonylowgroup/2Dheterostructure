@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Cr3Ni4(Te3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.84099800
+_cell_length_b   5.84099830
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000171
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Cr3Ni4(Te3O4)2
+_chemical_formula_sum   'Cr3 Ni4 Te6 O8'
+_cell_volume   886.39241568
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Cr  Cr0  1  0.66681451  0.66716309  0.39691195  1
+  Cr  Cr1  1  0.33399270  0.33293862  0.39781305  1
+  Cr  Cr2  1  0.00015854  0.00000041  0.39764314  1
+  Ni  Ni3  1  0.00001035  0.99997780  0.58064307  1
+  Ni  Ni4  1  0.99971978  0.50009467  0.58078501  1
+  Ni  Ni5  1  0.50015412  0.99969276  0.58078758  1
+  Ni  Ni6  1  0.50012922  0.50013499  0.58078738  1
+  Te  Te7  1  0.99794007  0.33520247  0.45545315  1
+  Te  Te8  1  0.66687002  0.00122728  0.33955086  1
+  Te  Te9  1  0.33272461  0.66632398  0.33963184  1
+  Te  Te10  1  0.00141516  0.33253574  0.33963945  1
+  Te  Te11  1  0.66767804  0.99773795  0.45553072  1
+  Te  Te12  1  0.33536715  0.66715935  0.45546533  1
+  O  O13  1  0.33332693  0.33331730  0.61083742  1
+  O  O14  1  0.33240185  0.83489631  0.61095166  1
+  O  O15  1  0.66667100  0.66664610  0.55011428  1
+  O  O16  1  0.66625730  0.16845633  0.54999852  1
+  O  O17  1  0.16528346  0.66623552  0.54998902  1
+  O  O18  1  0.16846596  0.16525254  0.54999150  1
+  O  O19  1  0.83267220  0.33237519  0.61095315  1
+  O  O20  1  0.83494705  0.83263159  0.61095692  1

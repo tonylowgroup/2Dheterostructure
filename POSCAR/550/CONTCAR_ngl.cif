@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Hf4Zr3(Te3O4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.64604400
+_cell_length_b   6.64604405
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000026
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Hf4Zr3(Te3O4)2
+_chemical_formula_sum   'Hf4 Zr3 Te6 O8'
+_cell_volume   1147.56769879
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.00000000  0.00000000  0.58702543  1
+  Hf  Hf1  1  0.99969862  0.50032697  0.58659391  1
+  Hf  Hf2  1  0.49997440  0.99969862  0.58659391  1
+  Hf  Hf3  1  0.50032697  0.49997440  0.58659391  1
+  Zr  Zr4  1  0.66666700  0.66666700  0.38208635  1
+  Zr  Zr5  1  0.33333300  0.33333300  0.38613844  1
+  Zr  Zr6  1  0.00000000  0.00000000  0.38669424  1
+  Te  Te7  1  0.99518786  0.33879492  0.44780357  1
+  Te  Te8  1  0.66719847  0.00404092  0.32184296  1
+  Te  Te9  1  0.32876061  0.66719847  0.32184296  1
+  Te  Te10  1  0.00404092  0.32876061  0.32184296  1
+  Te  Te11  1  0.66601722  0.99518786  0.44780357  1
+  Te  Te12  1  0.33879492  0.66601722  0.44780357  1
+  O  O13  1  0.33333300  0.33333300  0.61740627  1
+  O  O14  1  0.33414160  0.83282019  0.61769051  1
+  O  O15  1  0.66666700  0.66666700  0.55576748  1
+  O  O16  1  0.66762992  0.16723969  0.55610098  1
+  O  O17  1  0.16513138  0.66762992  0.55610098  1
+  O  O18  1  0.16723969  0.16513138  0.55610098  1
+  O  O19  1  0.83303721  0.33414160  0.61769051  1
+  O  O20  1  0.83282019  0.83303721  0.61769051  1

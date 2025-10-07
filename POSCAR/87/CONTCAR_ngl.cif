@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_Hf3Te6(MoS2)4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.56980163
+_cell_length_b   6.56980163
+_cell_length_c   30.00000000
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   60.00000375
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Hf3Te6(MoS2)4
+_chemical_formula_sum   'Hf3 Te6 Mo4 S8'
+_cell_volume   1121.38932019
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Hf  Hf0  1  0.00000000  0.00000000  0.61522346  1
+  Hf  Hf1  1  0.33333300  0.33333300  0.61623191  1
+  Hf  Hf2  1  0.66666700  0.66666700  0.62068392  1
+  Te  Te3  1  0.33975020  0.99460987  0.55528908  1
+  Te  Te4  1  0.66563993  0.33975020  0.55528908  1
+  Te  Te5  1  0.99460987  0.66563993  0.55528908  1
+  Te  Te6  1  0.32799790  0.00444968  0.67987836  1
+  Te  Te7  1  0.66755242  0.32799790  0.67987836  1
+  Te  Te8  1  0.00444968  0.66755242  0.67987836  1
+  Mo  Mo9  1  0.50112044  0.49901456  0.39142358  1
+  Mo  Mo10  1  0.49901456  0.99986500  0.39142358  1
+  Mo  Mo11  1  0.99986500  0.50112044  0.39142358  1
+  Mo  Mo12  1  0.00000000  0.00000000  0.39141168  1
+  S  S13  1  0.16568493  0.16769022  0.34045821  1
+  S  S14  1  0.16769022  0.66662585  0.34045821  1
+  S  S15  1  0.66662585  0.16568493  0.34045821  1
+  S  S16  1  0.66666700  0.66666700  0.34049700  1
+  S  S17  1  0.16472282  0.16871180  0.44222541  1
+  S  S18  1  0.16871180  0.66656638  0.44222541  1
+  S  S19  1  0.66656638  0.16472282  0.44222541  1
+  S  S20  1  0.66666700  0.66666700  0.44250712  1
