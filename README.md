@@ -2,6 +2,7 @@
 
 This database contains first-principles calculation results of a total of 990 van der Waals heterostructures with 45 monolayer transition metal dichalcogenides.
 If you use this database in your research, please cite:
+Lee, S., Lee, E.H., Kwon, Y.K., Koester, S.J., Avouris, P., Cherkassky, V., Tersoff, J. and Low, T., 2025. Generalized energy band alignment model for van der Waals heterostructures with a charge spillage dipole. ACS nano, 19(43), pp.37749-37757.
 
 ## data/DFT_vdWHs.json 
 DFT calculation results of vdW heterostructures and their crystal structures
